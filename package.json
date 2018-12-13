@@ -1,0 +1,29 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Burger app to practice ORM and SQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angeloaquino/burger.git"
+  },
+  "keywords": [
+    "burger",
+    "sql",
+    "orm"
+  ],
+  "author": "Angelo Aquino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angeloaquino/burger/issues"
+  },
+  "homepage": "https://github.com/angeloaquino/burger#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0"
+  }
+}
