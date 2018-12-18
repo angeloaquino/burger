@@ -1,74 +1,92 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12" align="center">
-            <img class="burgerimg" src="http://www.stickpng.com/assets/images/58824b33e81acb96424ffab9.png">
+            <h1>Eat The Secret Menu </h1>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12" align="center">
-            <h1>Eat-Da-Burger!</h1>
+        <div class="row">
+            <div class="col-lg-6" align="center">
+                <img class="burger" src="http://www.in-n-out.com/images/menu_v2/double_double_meal.png?v=1.2.1">
+            </div>
+            <div class="col-lg-6" align="center">
+                <br>
+                <br>
+                <form class="create-form">
+                    <div class="form-group">
+                        <textarea class="form-control" id="enterBurger" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="eatBurger btn btn-warning">Submit</button>
+                    <br>
+                    <div>
+                        <p>Enter the Secret Menu burger you want to eat and click the 'Submit' button</p>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-sm" align="center">
-            <form class="create-form">
-                <div class="form-group">
-                    <textarea class="form-control" id="enterBurger" rows="3"></textarea>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-lg-4" align="center">
+                <div class="card">
+                    <div class="card-body">
+                        <row>
+                            <h2>Secret Menu Options</h2>
+                            <br>            
+                        </row>
+                        <row align="center">
+                          
+                                <li class="btn btn-danger">Double Meat</li><br><br>
+                                <li class="btn btn-danger">3X3</li><br><br>
+                                <li class="btn btn-danger">4X4</li><br><br>
+                                <li class="btn btn-danger">Grilled Cheese</li><br><br>
+                                <li class="btn btn-danger">Protein Style</li><br><br>
+                                <li class="btn btn-danger">Flying Dutchman</li><br>
+                           
+                        </row>
+                    </div>
                 </div>
-                <button type="submit" class="eatBurger btn btn-primary">Submit</button>
-                <div>
-                    <p>Enter a burger you want to eat and click the 'Submit' button</p>
+            </div>
+            <div class="col-lg-4" align="center">
+                <div class="card">
+                    <div class="card-body">
+                        <row>
+                            <h2>Undevoured Burgers</h2>
+                            <p>Click Burger to devour!</p>
+                        </row>
+                        <row align="center">
+                            <ul>
+                                {{#each burgers}}
+                                {{#unless devoured}}
+                                <button type="button" record_number={{id}} class="notDevoured btn btn-warning">{{id}}.
+                                    {{burger_name}}</button>
+                                <br>
+                                <br>
+                                {{/unless}}
+                                {{/each}}
+                            </ul>
+                        </row>
+                    </div>
                 </div>
-            </form>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-lg-6" >
-            <div class="card">
-                <div class="card-body">
-                    <row>
-                        <h2>Undevoured Burgers</h2>
-                        <p>Click Burger to devour!</p>
-                    </row>
-                    <row align="center">
-                    <ul>
-                        {{#each burgers}}
-                        {{#unless devoured}}
-                        <button type="button" record_number={{id}} class="notDevoured btn btn-warning">{{id}}.
-                            {{burger_name}}</button>
-                        <br>
-                        <br>
-                        {{/unless}}
-                        {{/each}}
-                    </ul>
-                    </row>
+            </div>
+            <div class="col-lg-4" align="center">
+                <div class="card">
+                    <div class="card-body">
+                        <row>
+                            <h2>Devoured Burgers</h2>
+                            <p>See below for devoured burgers</p>
+                        </row>
+                        <row align="center">
+                            <ul>
+                                {{#each burgers}}
+                                {{#if devoured}}
+                                <button type="button" record_number={{id}} class="Devoured btn btn-secondary">{{id}}.
+                                    {{burger_name}}</button>
+                                <br>
+                                <br>
+                                {{/if}}
+                                {{/each}}
+                            </ul>
+                        </row>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-6">
-            <div class="card">
-                <div class="card-body">
-                    <row>
-                        <h2>Devoured Burgers</h2>
-                        <p>See below for devoured burgers</p>
-                    </row>
-                    <row align="center">
-                    <ul>
-                        {{#each burgers}}
-                        {{#if devoured}}
-                        <button type="button" record_number={{id}} class="Devoured btn btn-secondary">{{id}}.
-                            {{burger_name}}</button>
-                        <br>
-                        <br>
-                        {{/if}}
-                        {{/each}}
-                    </ul>
-                    </row>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<br>
-<br>

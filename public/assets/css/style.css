@@ -1,13 +1,17 @@
-.col-centered {
-  float: none;
-  margin-right: auto;
-  margin-left: auto;
+.burger {
+  height: 20em;
 }
 
-.burgerimg {
-  height: 10em;
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 5em;
 }
 
-.form-control {
-  width: 20em;
+h2 {
+font-family: 'Permanent Marker', cursive;
+}
+
+p{
+  font-family: 'Permanent Marker', cursive;
+
 }
